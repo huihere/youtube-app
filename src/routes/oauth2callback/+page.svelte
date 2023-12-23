@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { page } from "$app/stores";
+  import { PUBLIC_API_KEY } from '$env/static/public';
 
   // 從 URL 字串中解析出訪問令牌
   function getAccessTokenFromString(str: string) {
@@ -13,7 +14,7 @@
   const accessToken = getAccessTokenFromString($page.url.hash);
 
   // 這裡放置你的 API 金鑰
-  const key = 'key'
+  const key = PUBLIC_API_KEY
 
   // 存放訂閱頻道的陣列
   let subscriptions: any[] = [];

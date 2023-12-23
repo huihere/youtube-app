@@ -1,7 +1,10 @@
 <script lang="ts">
+
+  import { PUBLIC_CALLBACK, PUBLIC_CLIENT_IT } from '$env/static/public';
+  
   // 重定向 URI, 在 OAuth 驗證流程中使用
-  const redirect_uri = 'http://localhost:5173/oauth2callback'
-  const client_id = 'client_id'
+  const redirect_uri = PUBLIC_CALLBACK
+  const client_id = PUBLIC_CLIENT_IT
 
   /*
    * 創建表單以從 Google 的 OAuth 2.0 伺服器請求訪問令牌。

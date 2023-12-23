@@ -45,7 +45,7 @@
   }
 </script>
 
-<h1 class="text-3xl m-4">Mass Unsubscribe YouToube</h1>
+<h1 class="text-3xl m-4">Mass Unsubscribe YouTube Channels</h1>
 <p>
   <button class="btn btn-warning" on:click={oauthSignIn}>使用 Google 帳號登入</button>
 </p>

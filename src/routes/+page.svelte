@@ -1,10 +1,10 @@
 <script lang="ts">
 
-  import { PUBLIC_CALLBACK, PUBLIC_CLIENT_IT } from '$env/static/public';
+  import { PUBLIC_CALLBACK, PUBLIC_CLIENT_ID } from '$env/static/public';
   
   // 重定向 URI, 在 OAuth 驗證流程中使用
   const redirect_uri = PUBLIC_CALLBACK
-  const client_id = PUBLIC_CLIENT_IT
+  const client_id = PUBLIC_CLIENT_ID
 
   /*
    * 創建表單以從 Google 的 OAuth 2.0 伺服器請求訪問令牌。
@@ -45,7 +45,15 @@
   }
 </script>
 
-<h1 class="text-3xl m-4">Mass Unsubscribe YouTube Channels</h1>
-<p>
-  <button class="btn btn-warning" on:click={oauthSignIn}>使用 Google 帳號登入</button>
-</p>
+<section class="flex flex-col items-center border-2">
+  <h1 class="text-3xl m-4">Mass Unsubscribe YouTube Channels</h1>
+  <p class="p-4">
+    <button type="button" class="bg-[url('imgs/web_light_sq_SI@1x.png')] w-44 h-10 bg-no-repeat bg-center" on:click={oauthSignIn}></button>
+  </p>
+  <p class="p-4">
+    (<span class="">Mass Unsubscribe YouTube Channels</span>) use YouTube Data API to list all subscriptions. You can mass unsubscribe all subscriptions in one click.
+  </p>
+  <p class="p-4">
+    (<span class="">Mass Unsubscribe YouTube Channels</span>) use and transfer to any other app of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy" class="link link-neutral" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. 
+  </p>
+</section>
